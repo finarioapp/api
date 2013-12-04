@@ -16,7 +16,7 @@ Finario data in your application.
 
 ###Lists
 - **[<code>GET</code> Investments](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/InvestmentsIndex.md)**
-- **[<code>GET</code> Investments](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/CostsIndex.md)**
+- **[<code>GET</code> Costs](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/CostsIndex.md)**
 
 ###Operations
 - **[<code>POST</code> AddActual](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/AddActual.md)**
