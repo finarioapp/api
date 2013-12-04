@@ -6,7 +6,7 @@ The API uses JSON over HTTP to allow you to build applications capable of using 
 
 ##Checklist
 * Visit the API section of your Finario application to get your API Key.
-* Congigure the white list of IP addresses that can access your API.
+* Configure the white list of IP addresses that can access your API.
 * Familiarize yourself with REST and the Finario resource names.
 * Begin developing your application.
 
