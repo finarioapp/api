@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+log/*.pid
+tmp/
+coverage
+public/assets
+.DS_Store
+webrat.log
+.sass-cache/
+.rvmrc
+.idea/
+.ruby-version
+.ruby-gemset
