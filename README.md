@@ -2,8 +2,7 @@ Finario Connect API
 ===================
 Our set of APIs enable seamless integration of Finario directly into your internal workflows, products and services.
 
-The API uses JSON over HTTP POST to allow you to build applications capable of using or adding
-Finario data in your application.
+The API uses JSON over HTTP to allow you to build applications capable of using or adding Finario data in your application.
 
 ##Checklist
 * Visit the API section of your Finario application to get your API Key.
@@ -28,11 +27,10 @@ The 'api' namespace returns the latest API. To reach version X of the API use 'a
 
 
 ###Authentication
-All operations in the Finario Connect API require an authentication token 
-argument provided in the RequestHeader. An authentication token securely 
-identifies the caller of an operation. When called, an operation checks the validity of 
-the provided authentication token before executing the request. A malformed, 
-invalid, or expired token causes an operation to fail.
+All operations in the Finario Connect API require an authentication token argument provided in the RequestHeader.
+An authentication token securely identifies the caller of an operation. When called, an operation checks the validity of
+the provided authentication token before executing the request. A malformed, invalid, or expired token causes an
+operation to fail.
 
 ###Secure-Only Operations
 All operations are secure only. These operation must be called over an SSL
