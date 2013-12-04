@@ -1,6 +1,6 @@
 CostsIndex
 ----------
-CostsIndex returns a list of all the investment's costs their ids.
+CostsIndex returns a list of all the investment's costs and their ids.
 
 ###Endpoint
 Use the following endpoint to access this operation:
