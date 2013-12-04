@@ -1,7 +1,6 @@
 Finario Connect API
 ===================
-Our set of APIs enable seamless integration of Finario's expansive content, powerful search 
-and rich metadata directly into your internal workflows, products and services.
+Our set of APIs enable seamless integration of Finario directly into your internal workflows, products and services.
 
 The API uses JSON over HTTP POST to allow you to build applications capable of using or adding
 Finario data in your application.
