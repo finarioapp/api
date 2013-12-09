@@ -22,12 +22,7 @@ Use the following endpoint to access this operation:
     [
         {  name: '<name>',
            id: '<investment_id>',
-           organization: '<organization>',
-           project_start: '<fiscal month and year>',
-           in_service_date: '<fiscal month and year>'
-           category: '<category>',
-           custom_field: 'custom value',
-           ...,
+           costs: '<resource locator for costs>'
         },
         ...
     ]
