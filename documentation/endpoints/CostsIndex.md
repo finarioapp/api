@@ -21,9 +21,8 @@ Use the following endpoint to access this operation:
     [
         {  name: '<name>',
            id: '<cost_id>',
-           amount: '<amount>',
-           currency: '<currency>,
-           spend_date: '<fiscal month and year>'
+           description: '<description>',
+           investment_id: '<investment_id>
         },
         ...
     ]
