@@ -18,8 +18,6 @@ The API uses JSON over HTTP to allow you to build applications capable of using 
 
 ###Operations
 - **[<code>POST</code> AddActual](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/AddActual.md)**
-- **[<code>PUT</code> ModifyActual](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/ModifyActual.md)**
-- **[<code>POST</code> DeleteActual](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/DeleteActual.md)**
 
 
 ###Versions
