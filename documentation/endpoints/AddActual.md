@@ -22,12 +22,12 @@ Use the following endpoint to access this operation:
 
 ###Request
 
-    Amount
-    Currency
-    Name
-    Description
-    Item Date
-    Payment Date
+    {  amount: '<amount>',
+       currency_iso_code: 'ISO Code',
+       reference: '<your reference>',
+       item_date: '<document date>',
+       payment_date: '<date of event>'
+    }
 
 ###Response
 
@@ -38,11 +38,12 @@ Use the following endpoint to access this operation:
     }
 
 ###Errors
-   Status Code: (not 201)
+   Status Code: (422)
 
     Response Header: {
+    	success: false,
+    	message: "<summary of error message>"
         errors: [
-            amount: error
-            item_date: error
+            field: "<error>",
             ...
         ]
