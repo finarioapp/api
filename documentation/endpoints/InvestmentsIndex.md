@@ -50,8 +50,8 @@ end before 2014
 ####keywords=one two
 have the keywords one and two
 
-####organization=B.C.
-are in the "B.C." organization
+####organization=Asia
+are in the "Asia" organization (first letter must be capitalized)
 
 ####categories[]=Asset Replacement
 have the investment category "Asset Replacement" (include the brackets)
