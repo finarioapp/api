@@ -48,7 +48,7 @@ end by June
 end before 2014
 
 ####keywords=one two
-have the keywords one or two
+have the keywords one and two
 
 ####organization=B.C.
 are in the "B.C." organization
@@ -62,10 +62,11 @@ more than $1MM in spends (yes that is a comma) only 'greater than' ranges define
 other examples: "greater_than,$1M", "less_than,$1M-greater_than,$500k"
 
 ####round=Approved
-are fully approved
+are fully approved, other values: "Idea", "Closed", "Denied", "Invalidated", "Pending", "Remanded"
+or the name of an approval round will return all investments currently in that round
 
 ####budgeted_status=budgeted
-are in a budget
+are in a budget, not in a budget use "unbudgeted"
 
 ####vendor=Amazon
 use the vender "Amazon"
