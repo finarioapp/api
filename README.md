@@ -32,7 +32,7 @@ operation to fail.
 
 ###Secure-Only Operations
 All operations are secure only. These operation must be called over an SSL
-connection with a secure token.
+connection with a secure token from the user's registered IP address.
 
 The required combination of passing a secure token over SSL prevents a "man-in-the-middle" 
 exploitation where an attacker sniffs tokens from a non-SSL connection, then uses the token 
@@ -40,4 +40,6 @@ to impersonate the client, thereby possibly gaining access to sensitive informat
 processes. Operations that could expose sensitive data only accept secure tokens 
 over SSL. As long as these tokens are always and only passed over SSL, attackers can 
 never acquire a secure token with which to impersonate a valid customer.
+
+The use of an IP whitelist to verify that the connection is being established from a known safe IP address provides another layer of security.  This multi-layered, "defense in depth" strategy ensures that API connections to Finario are always highly secure.
 
