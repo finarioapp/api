@@ -54,10 +54,12 @@ have the keywords one or two
 are in the "B.C." organization
 
 ####categories[]=Asset Replacement
-have the investment category "Asset Replacement"
+have the investment category "Asset Replacement" (include the brackets)
+additional investment categories can be added to find those matching investments as well
 
-####size_range=greater_than%2C%241M		
-other options: "greater_than,$1M", "less_than,$1M-greater_than,$500k"
+####size_range=greater_than,$1M
+more than $1MM in spends (yes that is a comma) only 'greater than' ranges defined in Approval Routes are valid 
+other examples: "greater_than,$1M", "less_than,$1M-greater_than,$500k"
 
 ####round=Approved
 are fully approved
