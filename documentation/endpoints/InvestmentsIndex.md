@@ -30,10 +30,12 @@ Use the following endpoint to access this operation:
 ###Additional Search Query Parameters
 
 The following query parameters can be included in the request to filter for investments that only meet these characteristics. By default, the current fiscal year's investments are returned. Only investments that the user
-providing the token can see are included. All values should be encoded for URL.
+providing the token can see are included. All values should be encoded for URL. 
 
-Example
--------
+If typing into a browswer all query parameters are separated by '&' for example after "token=<whatever>&start_month=7&start_year=2013..."
+
+Examples
+--------
 
 ####start_month=7
 start on or before july
@@ -56,6 +58,7 @@ are in the "Asia" organization (first letter must be capitalized)
 ####categories[]=Asset Replacement
 have the investment category "Asset Replacement" (include the brackets)
 additional investment categories can be added to find those matching investments as well
+add another query variable like this "categories[]=Capacity Expansion"
 
 ####size_range=greater_than,$1M
 more than $1MM in spends (yes that is a comma) only 'greater than' ranges defined in Approval Routes are valid 
