@@ -32,7 +32,7 @@ Use the following endpoint to access this operation:
 The following query parameters can be included in the request to filter for investments that only meet these characteristics. By default, the current fiscal year's investments are returned. Only investments that the user
 providing the token can see are included. All values should be encoded for URL. 
 
-If typing into a browswer all query parameters are separated by '&' for example after "token=<whatever>&start_month=7&start_year=2013..."
+If typing into a browswer all query parameters are separated by '&' for example after "token=whatever&start_month=7&start_year=2013..."
 
 Examples
 --------
