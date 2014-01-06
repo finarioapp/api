@@ -43,3 +43,4 @@ never acquire a secure token with which to impersonate a valid customer.
 
 The use of an IP whitelist to verify that the connection is being established from a known safe IP address provides another layer of security.  This multi-layered, "defense in depth" strategy ensures that API connections to Finario are always highly secure.
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/106114425ba8e46ff1e28c06d1749d72 "githalytics.com")](http://githalytics.com/finarioapp/connect)
