@@ -15,9 +15,11 @@ The API uses JSON over HTTP to allow you to build applications capable of using 
 ###Lists
 - **[<code>GET</code> Investments](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/InvestmentsIndex.md)**
 - **[<code>GET</code> Costs](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/CostsIndex.md)**
+- **[<code>GET</code> Vendors](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/VendorsIndex.md)**
 
 ###Operations
-- **[<code>POST</code> AddActual](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/AddActual.md)**
+- **[<code>POST</code> AddPayment](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/AddPayment.md)**
+- **[<code>POST</code> AddVendor](https://github.com/finarioapp/connect/tree/master/documentation/endpoints/AddVendor.md)**
 
 
 ###Versions
