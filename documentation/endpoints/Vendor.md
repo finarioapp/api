@@ -1,19 +1,21 @@
-AddVendor
+Vendor
 ---------
-AddVendor creates a vendor
+Creates and /or updates a vendor
 
 ###Endpoint
 Use the following endpoint to access this operation:
 
 	POST
-	https://<your_host>.finario.com/api/vendors?token='your-api-token'
+	https://<your_host>.finario.com/api/vendors/<vendor_id>.json?token='your-api-token'
 
         or
 
 	POST
-	https://<your_host>.finario.com/api/vendors
+	https://<your_host>.finario.com/api/vendors/vendor_id
         Request Header: {
             x-api-token='your-api-token'
+            Accept=application/json
+            Content-Type=application/json
         }
 
 ###Request (*) - mandatory
@@ -36,10 +38,8 @@ Use the following endpoint to access this operation:
 
     Status Code: 201
 
-    Response Body: {
-      name: '<name>',
-      id: '<id>',
-      vendor_id: '<external vendor id>
+    Response Header: {
+        location: https://<your_host>.finario.com/api/vendor/<vendor_id>
     }
 
 ###Errors
