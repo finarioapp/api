@@ -30,7 +30,7 @@ The 'api' namespace returns the latest API. To reach version X of the API use 'a
 
 
 ###Authentication
-All operations in the Finario Connect API require an authentication token argument provided in the RequestHeader.
+All operations in the Finario API require an authentication token argument provided in the RequestHeader.
 An authentication token securely identifies the caller of an operation. When called, an operation checks the validity of
 the provided authentication token before executing the request. A malformed, invalid, or expired token causes an
 operation to fail.
