@@ -1,4 +1,4 @@
-Finario Connect API
+Finario API
 ===================
 Our set of APIs enable seamless integration of Finario directly into your internal workflows, products and services.
 
