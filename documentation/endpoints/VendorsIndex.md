@@ -1,27 +1,34 @@
-VendorsIndex
+Vendors Index
 ----------
-VendorsIndex returns a list of all Vendors.
+Returns a list of all Vendors.
 
-###Endpoint
-Use the following endpoint to access this operation:
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/vendors
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/vendors?token='your-api-token'
+```
 
-	GET
-	https://<your_host>.finario.com/api/vendors?token='your-api-token'
+***
 
-        or
+### Response Status
+`200`
 
-	GET
-    https://<your_host>.finario.com/api/vendors
-        Request Header: {
-            x-api-token='your-api-token'
-        }
+***
 
-###Response
-
-    [
-        {  name: '<name>',
-           id: '<id>',
-           vendor_id: '<external vendor id>
-        },
-        ...
-    ]
+### Response Body
+```
+[
+  {
+    name: '<name>',
+    id: '<id>',
+    vendor_id: '<external vendor id>'
+  },
+  ...
+]
+```

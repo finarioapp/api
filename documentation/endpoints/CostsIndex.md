@@ -1,28 +1,35 @@
-CostsIndex
+Costs Index
 ----------
-CostsIndex returns a list of all the investment's costs and their ids.
+Returns a list of all costs for a given investment.
 
-###Endpoint
-Use the following endpoint to access this operation:
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/investments/<investment_id>/costs
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/investments/<investment_id>/costs?token='your-api-token'
+```
 
-	GET
-	https://<your_host>.finario.com/api/investments/:investment_id/costs?token='your-api-token'
+***
 
-        or
+### Response Status
+`200`
 
-	GET
-    https://<your_host>.finario.com/api/investments/:investment_id/costs
-        Request Header: {
-            x-api-token='your-api-token'
-        }
+***
 
-###Response
-
-    [
-        {  name: '<name>',
-           id: '<cost_id>',
-           description: '<description>',
-           investment_id: '<investment_id>
-        },
-        ...
-    ]
+### Response Body
+```
+[
+  {
+    name: '<name>',
+    id: '<cost_id>',
+    description: '<description>',
+    investment_id: '<investment_id>'
+  },
+  ...
+]
+```
