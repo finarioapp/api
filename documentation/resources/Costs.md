@@ -1,4 +1,4 @@
-# Cost Categories Resources
+# Costs Resources
 
 1. [Index](#costs-index)
 2. [Show](#costs-show)
