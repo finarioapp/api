@@ -1,4 +1,4 @@
-# Vendors Resources
+# Organizations Resources
 
 1. [Index](#organizations-index)
 2. [Create](#organizations-create)
@@ -7,7 +7,7 @@
 
 ## Organizations Index
 Returns a list of all Organizations.
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 ```
@@ -19,18 +19,20 @@ GET https://<your_host>.finario.com/api/organizations
 ```
 `GET https://<your_host>.finario.com/api/organizations?token='your-api-token'`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Body
 * Please note that a list of objects is returned separated by a new line. An array is not returned
 ```
 {"name": "<org_1_name>", "id":"<org_1_id>", "parent_id":"<org_1_parent_id"}
 {"name": "<org_2_name>", "id":"<org_2_id>", "parent_id":"<org_2_parent_id"}
+...
+{"name": "<org_n_name>", "id":"<org_n_id>", "parent_id":"<org_n_parent_id"}
 ```
 
 * * *
@@ -39,8 +41,9 @@ GET https://<your_host>.finario.com/api/organizations
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/<parent_org_id>/organizations?token=your-api-token`
-* Please note that a `<parent_org_id>` in the URL. A top-level organization cannot be created through the API.
-<hr style="border-bottom: 1px solid #ddd"/>
+* Please note that a `<parent_org_id>` is required in the URL. A top-level organization cannot be created through the API.
+
+<h2/>
 
 ### Acceptable Parameters
 
@@ -50,7 +53,7 @@ Name | Required | Type | Notes
 `org_code` | true | string |
 `default_currency_code` | | string | ISO code. e.g., 'USD' or 'EUR'
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -59,7 +62,7 @@ Name | Required | Type | Notes
 #### Body
 `{id: "<new organization id>"}`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Parent org not found

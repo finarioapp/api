@@ -9,7 +9,7 @@
 
 ## Cost Categories Index
 Returns a list of all cost categories
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 ```
@@ -23,7 +23,7 @@ GET https://<your_host>.finario.com/api/cost_categories
 GET https://<your_host>.finario.com/api/cost_categories?token='your-api-token'
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
@@ -49,7 +49,7 @@ GET https://<your_host>.finario.com/api/cost_categories?token='your-api-token'
 POST https://<your_host>.finario.com/api/cost_categories?token='your-api-token'
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -59,7 +59,7 @@ Name | Required | Type | Notes
 `category_code` | | string |
 `parent_name` | | string | If there is no category with the given name, a new category will be created.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -74,7 +74,7 @@ Name | Required | Type | Notes
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Missing required fields
@@ -93,12 +93,12 @@ _status_: `422`, _body_: `{"errors":["Name can't be blank"]}`
 PUT https://<your_host>.finario.com/api/cost_categories/<cost_category_id>?token='your-api-token'
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Cost Categories Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 
@@ -114,7 +114,7 @@ Please see the [list in the Cost Categories Create section above](#acceptable-pa
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Cost Category Not Found

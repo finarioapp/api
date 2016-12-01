@@ -17,9 +17,9 @@ The API uses JSON over HTTPS to allow you to build applications capable of using
 ## Authentication
 All operations in the Finario API require an authentication token. An authentication token securely identifies the caller of an operation. When called, an operation checks the validity of the provided authentication token before executing the request. A malformed, invalid, or expired token causes an operation to fail.
 
-Across all API requests, organizational permissions are honored based on the user providing the authentication token. A common practice is to create an API user (within your Finario application) with permissions for the highest-level organization(s).
+Across all API requests, organizational permissions are honored based on the user providing the authentication token.
 
-The authentication token can be provided in the RequestHeader or as URL query parameter.
+The authentication token can be provided in the Request Header or as URL query parameter.
 
 __Request header example:__
 ```
@@ -34,7 +34,7 @@ __URL query parameter example:__
 GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 ```
 
-* Please note that the authentication token is sometimes omitted throughout this documentation. This is for clearer presentation only. It is not meant to imply that the token is optional.
+* Please note that the authentication token is sometimes omitted throughout this documentation. This is for clearer presentation only. It is not meant to imply that the token is optional for those endpoints.
 
 ***
 

@@ -19,7 +19,7 @@ GET https://<your_host>.finario.com/api/purchase_orders/<purchase_order_id>
 ```
 GET https://<your_host>.finario.com/api/purchase_orders/<purchase_order_id>?token=<your_api_token>
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 
 ### Successful Response
@@ -48,11 +48,11 @@ GET https://<your_host>.finario.com/api/purchase_orders/<purchase_order_id>?toke
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
-_status_: `404`, _body_: `{"success":false,"message":"Cost Not Found"}`
+_status_: `404`, _body_: `{"success":false,"message":"Purchase Order Not Found"}`
 
 * * *
 
@@ -60,7 +60,7 @@ _status_: `404`, _body_: `{"success":false,"message":"Cost Not Found"}`
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/purchase_orders?token=<your_api_token>`
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -76,7 +76,7 @@ Name | Required | Type | Notes
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -104,7 +104,7 @@ Name | Required | Type | Notes
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found
@@ -122,12 +122,12 @@ _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't 
 ### Endpoint
 `PUT https://<your_host>.finario.com/api/investments/<investment_id>/purchase_orders/<purchase_order_id>`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Purchase Orders Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 
@@ -137,7 +137,7 @@ Please see the [list in the Purchase Orders Create section above](#acceptable-pa
 #### Body
 `null`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found
@@ -147,5 +147,4 @@ _status_: `404`, _body_: `{"success":false,"message":"Investment Not Found"}`
 _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't be blank"],"po_number":["can't be blank"],"po_line":["can't be blank"]}}`
 
 #### - Purchase Order not found
-This update endpoint works as an "upsert". If you use a Purchase Order ID that doesn't exist, a new Purchase Order will be created for the given investment. A new ID will be created; the one used in the endpoint's URL will be disregarded.
-
+This update endpoint works as an "upsert". If you use a Purchase Order ID that doesn't exist, a new Purchase Order will be created for the given investment. A new ID will be created; the one used in the endpoint's URL will be disregarded. Please pass in a `reference` if you'd like to assign a unique external reference ID to the Purchase Order.

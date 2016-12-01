@@ -19,7 +19,7 @@ GET https://<your_host>.finario.com/api/users/<user_email>
 GET https://<your_host>.finario.com/api/users/<user_email>?token=<your_api_token>
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -34,7 +34,7 @@ GET https://<your_host>.finario.com/api/users/<user_email>?token=<your_api_token
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
@@ -48,7 +48,7 @@ _status_: `404`, _body_: `{"success":false,"message":"User Not Found"}`
 
 ### Endpoint
 `PUT https://<your_host>.finario.com/api/useres/<user_email>?token=your-api-token`
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Name | Required | Type | Notes
@@ -64,10 +64,10 @@ Name | Required | Type | Notes
 authority_assignment_object[`authority`] | | string | Must match an authority assignment `name` that already exists in your Finario application.
 authority_assignment_object[`organization`] | | string | Must match an organization `name` that already exists in your Finario application.
 `permissions` | | array | An array of Permission objects, e.g., `[{"name": "foo", "organization": "bar"}]`
-permission_object['name'] | | string | As of now, "Edit" is the only level of permissions supported.
-permission_object['organization'] | | string | Must match an organization `name` that already exists in your Finario application.
+permission_object[`name`] | | string | As of now, "Edit" is the only level of permissions supported.
+permission_object[`organization`] | | string | Must match an organization `name` that already exists in your Finario application.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -75,7 +75,7 @@ permission_object['organization'] | | string | Must match an organization `name`
 #### Body
 `null`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Missing required fields

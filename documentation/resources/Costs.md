@@ -8,7 +8,7 @@
 
 ## Costs Index
 Returns a list of all costs for a given investment.
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 ```
@@ -22,12 +22,12 @@ GET https://<your_host>.finario.com/api/investments/<investment_id>/costs
 GET https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=<your_api_token>
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Body
 ```
@@ -49,7 +49,7 @@ GET https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=
 ### Endpoint
 `GET https://<your_host>.finario.com/api/investments/<investment_id>/costs/<cost_id>?token=<your_api_token>`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -143,7 +143,7 @@ GET https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
@@ -156,7 +156,7 @@ _status_: `404`, _body_: `{"success":false,"message":"Cost Not Found"}`
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=<your_api_token>`
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -177,7 +177,7 @@ expected_units_object[`project_month`] | | string | This should be the project m
 `freight[dollars]` | | float |
 `freight[currency]` | | string | For example "USD" or "EUR"
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -271,7 +271,7 @@ expected_units_object[`project_month`] | | string | This should be the project m
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found

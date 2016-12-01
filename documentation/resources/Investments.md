@@ -12,7 +12,7 @@
 ## Investments Index
 Returns a list of all investments, scoped by the organizational permissions of the user providing the authentication token.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 ```
@@ -26,12 +26,12 @@ GET https://<your_host>.finario.com/api/investments
 GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Body
 ```
@@ -46,7 +46,7 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
   ...
 ]
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Optional Parameters
 
@@ -79,7 +79,7 @@ Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" s
 ### Endpoint
 `GET https://<your_host>.finario.com/api/investments/investment_id?token='your-api-token'`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -98,7 +98,7 @@ Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" s
   ...
 ]
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
@@ -114,7 +114,7 @@ _status_: `404`, _body_: `{errors:["Not Found"]}`
 ```
 POST https://<your_host>.finario.com/api/investments?token='your-api-token'
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -132,7 +132,7 @@ Name | Required | Type | Notes
 `rationale` | | string |
 `api_request` | | string | Providing a value here will automatically add the keyword "api" to the created investment.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -140,19 +140,16 @@ Name | Required | Type | Notes
 
 #### Body
 ```
-[
-  {
-    name: '<name>',
-    id: '<investment_id>',
-    investment_id: '<investment_code>',
-    api_request: '<api request used to create the investment (if created via api)>',
-    costs_path: '<resource locator for costs>'
-  },
-  ...
-]
+{
+  name: '<name>',
+  id: '<investment_id>',
+  investment_id: '<investment_code>',
+  api_request: '<api request used to create the investment (if created via api)>',
+  costs_path: '<resource locator for costs>'
+}
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Organization Not Found
@@ -177,12 +174,12 @@ _status_: `422`, _body_: `{"errors":["In service date cannot be before project s
 PUT https://<your_host>.finario.com/api/investments/<investment_id>?token='your-api-token'
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Investments Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 

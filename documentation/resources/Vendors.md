@@ -8,7 +8,7 @@
 
 ## Vendors Index
 Returns a list of all Vendors.
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 ```
@@ -20,12 +20,12 @@ GET https://<your_host>.finario.com/api/vendors
 ```
 `GET https://<your_host>.finario.com/api/vendors?token='your-api-token'`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Body
 ```
@@ -45,7 +45,7 @@ GET https://<your_host>.finario.com/api/vendors
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/vendors?token=your-api-token`
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -64,7 +64,7 @@ Name | Required | Type | Notes
 `contact_email` | | string |
 `notes` | | string |
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -78,7 +78,7 @@ Name | Required | Type | Notes
   "vendor_id": "<vendor_id>"
 }
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Missing required field
@@ -95,12 +95,12 @@ _status_: `422`, _body_: `{"errors":{"short_name":["has already been taken"]}}`
 ### Endpoint
 `PUT https://<your_host>.finario.com/api/vendors/<vendor_id>.json?token=your-api-token`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Vendors Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 
@@ -110,11 +110,11 @@ Please see the [list in the Vendors Create section above](#acceptable-parameters
 #### Body
 `null`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Missing required field
 _status_: `422`, _body_: `{"errors":{"name":["can't be blank"]}}`
 
 #### - Not found
-__PLEASE NOTE__: This update endpoint works as an "upsert". If you use a Vendor ID that doesn't exist, a new vendor will be created.
+This update endpoint works as an "upsert". If you use a `vendor_id` that doesn't exist, a new Vendor will be created with the `vendor_id` attribute set to the ID passed in.

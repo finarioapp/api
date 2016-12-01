@@ -19,7 +19,7 @@ GET https://<your_host>.finario.com/api/invoices/<invoice_id>
 ```
 GET https://<your_host>.finario.com/api/invoices/<invoice_id>?token=<your_api_token>
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 
 ### Successful Response
@@ -46,7 +46,7 @@ GET https://<your_host>.finario.com/api/invoices/<invoice_id>?token=<your_api_to
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
@@ -58,7 +58,7 @@ _status_: `404`, _body_: `{"success":false,"message":"Invoice Not Found"}`
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/vendors/<vendor_id>/invoices?token=<your_api_token>`
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -75,7 +75,7 @@ Name | Required | Type | Notes
 `po_type` | | string | Purchase order type
 `gl_line` | | string | General ledger line
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -103,7 +103,7 @@ Name | Required | Type | Notes
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found
@@ -132,12 +132,12 @@ or
 `PUT https://<your_host>.finario.com/api/investments/<investment_id>/vendors/<vendor_id>/invoices/<invoice_reference>`
 
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Invoices Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 
@@ -147,7 +147,7 @@ Please see the [list in the Invoices Create section above](#acceptable-parameter
 #### Body
 `null`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found
@@ -160,4 +160,4 @@ _status_: `404`, _body_: `{"success":false,"message":"Vendor Not Found"}`
 _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't be blank"],"number":["can't be blank"]}}`
 
 #### - Invoice not found
-This update endpoint works as an "upsert". If you use a Invoice ID (or Invoice Reference ID) that doesn't exist, a new invoice will be created.
+This update endpoint works as an "upsert". If you use an Invoice Reference ID that doesn't exist, a new invoice will be created with the `reference` attribute set to the ID passed in.

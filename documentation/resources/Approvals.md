@@ -19,12 +19,12 @@ GET https://<your_host>.finario.com/api/investments/<investment_id>/approvals/<a
 GET https://<your_host>.finario.com/api/investments/<investment_id>/approvals/<approval_id>?token=<your_api_token>
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Status
 `200`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Response Body
 ```
@@ -48,7 +48,7 @@ GET https://<your_host>.finario.com/api/investments/<investment_id>/approvals/<a
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Investment not found
@@ -62,12 +62,12 @@ _status_: `404`, _body_: `{"success":false,"message":"Approval Not Found"}`
 
 ## Approvals Create
 This operation will submit the investment to the first approver in the approval list. It changes the investment's status from "Idea" to "Pending".
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/approvals`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -95,7 +95,7 @@ This operation will submit the investment to the first approver in the approval 
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Investment not found

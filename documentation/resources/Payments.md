@@ -19,7 +19,7 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>
 ```
 GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_token>
 ```
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 
 ### Successful Response
@@ -46,7 +46,7 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_to
 }
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### Not Found
@@ -69,7 +69,7 @@ or
 POST https://<your_host>.finario.com/api/investments/<investment_id>/costs/<cost_id>/payments/
 ```
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 
@@ -87,7 +87,7 @@ Name | Required | Type | Notes
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 #### Status
@@ -116,7 +116,7 @@ Name | Required | Type | Notes
 ```
 
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 #### - Missing required fields
 _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't be blank"]}}`
@@ -132,12 +132,12 @@ _status_: `422`, _body_: `{"errors":{"reference":["has already been taken"]}}`
 ### Endpoint
 `PUT https://<your_host>.finario.com/api/investments/<investment_id>/payments/<payment_id>`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Acceptable Parameters
 Please see the [list in the Payments Create section above](#acceptable-parameters).
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Successful Response
 
@@ -147,7 +147,7 @@ Please see the [list in the Payments Create section above](#acceptable-parameter
 #### Body
 `null`
 
-<hr style="border-bottom: 1px solid #ddd"/>
+<h2/>
 
 ### Errors
 #### - Investment not found
@@ -157,4 +157,4 @@ _status_: `404`, _body_: `{"success":false,"message":"Investment Not Found"}`
 _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't be blank"]}}`
 
 #### - Payment not found
-This update endpoint works as an "upsert". If you use a Payment ID that doesn't exist, a new Payment will be created with the passed ID as the reference.
+This update endpoint works as an "upsert". If you use a Payment ID that doesn't exist, a new Payment will be created with the `reference` attribute set to the ID passed in.
