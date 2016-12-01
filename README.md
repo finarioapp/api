@@ -15,8 +15,7 @@ The API uses JSON over HTTPS to allow you to build applications capable of using
 ***
 
 ## Authentication
-All operations in the Finario API require an authentication token. An authentication token securely identifies the caller of an operation. When called, an operation checks the validity of the provided authentication token before executing the request. A malformed, invalid, or expired token causes an
-operation to fail.
+All operations in the Finario API require an authentication token. An authentication token securely identifies the caller of an operation. When called, an operation checks the validity of the provided authentication token before executing the request. A malformed, invalid, or expired token causes an operation to fail.
 
 Across all API requests, organizational permissions are honored based on the user providing the authentication token. A common practice is to create an API user (within your Finario application) with permissions for the highest-level organization(s).
 
@@ -34,25 +33,25 @@ __URL query parameter example:__
 ```
 GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 ```
+
+* Please note that the authentication token is sometimes omitted throughout this documentation. This is for clearer presentation only. It is not meant to imply that the token is optional.
+
 ***
 
 
-## Endpoints
+## Resources (endpoints)
+- **[Approvals](https://github.com/finarioapp/api/blob/master/documentation/resources/Approvals.md)** (show, create)
+- **[Costs](https://github.com/finarioapp/api/blob/master/documentation/resources/Costs.md)** (index, show, create)
+- **[Cost Categories](https://github.com/finarioapp/api/blob/master/documentation/resources/CostCategories.md)** (index, create, update)
+- **[Investments](https://github.com/finarioapp/api/blob/master/documentation/resources/Investments.md)** (index, show, create, update)
+- **[Invoices](https://github.com/finarioapp/api/blob/master/documentation/resources/Invoices.md)** (show, create, upsert)
+- **[Organizations](https://github.com/finarioapp/api/blob/master/documentation/resources/Organizations.md)** (index, create)
+- **[Purchase Orders](https://github.com/finarioapp/api/blob/master/documentation/resources/PurchaseOrders.md)** (show, create, upsert)
+- **[Users](https://github.com/finarioapp/api/blob/master/documentation/resources/Users.md)** (show, upsert)
+- **[Vendors](https://github.com/finarioapp/api/blob/master/documentation/resources/Vendors.md)** (index, create, upsert)
 
-### Lists
-- **[<code>GET</code> Costs](https://github.com/finarioapp/api/blob/master/documentation/endpoints/CostsIndex.md)**
-- **[<code>GET</code> Cost Categories](https://github.com/finarioapp/api/blob/master/documentation/endpoints/CostCategories.md)**
-- **[<code>GET</code> Investments](https://github.com/finarioapp/api/blob/master/documentation/endpoints/InvestmentsIndex.md)**
-- **[<code>GET</code> Vendors](https://github.com/finarioapp/api/blob/master/documentation/endpoints/VendorsIndex.md)**
 
-### Operations
-- **[<code>POST</code> User](https://github.com/finarioapp/api/blob/master/documentation/endpoints/User.md)**
-- **[<code>POST</code> Payment](https://github.com/finarioapp/api/blob/master/documentation/endpoints/Payment.md)**
-- **[<code>POST</code> Invoice](https://github.com/finarioapp/api/blob/master/documentation/endpoints/Invoice.md)**
-- **[<code>POST</code> PurchaseOrder](https://github.com/finarioapp/api/blob/master/documentation/endpoints/PurchaseOrder.md)**
-- **[<code>POST</code> Vendor](https://github.com/finarioapp/api/blob/master/documentation/endpoints/Vendor.md)**
 ***
-
 
 ### Secure-Only Operations
 All operations are secure only. These operation must be called over an SSL
