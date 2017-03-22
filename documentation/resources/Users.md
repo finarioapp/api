@@ -30,7 +30,8 @@ GET https://<your_host>.finario.com/api/users/<user_email>?token=<your_api_token
 {
   "id": "<user id>",
   "name": "<user name>",
-  "email": "<user email>"
+  "email": "<user email>",
+  "external_id": "<user external_id>"
 }
 ```
 
@@ -47,7 +48,7 @@ _status_: `404`, _body_: `{"success":false,"message":"User Not Found"}`
 ## Users Upsert
 
 ### Endpoint
-`PUT https://<your_host>.finario.com/api/useres/<user_email>?token=your-api-token`
+`PUT https://<your_host>.finario.com/api/users/<user_email>?token=your-api-token`
 <h2/>
 
 ### Acceptable Parameters
@@ -55,6 +56,7 @@ Name | Required | Type | Notes
 ---- | :------: | :--: | -----
 `first_name` | true | string |
 `last_name` | true | string |
+`external_id` | | string |
 `has_budgets_feature` | | boolean |
 `has_approvals` | | boolean |
 `has_actual_costs_feature` | | boolean |
@@ -80,6 +82,9 @@ permission_object[`organization`] | | string | Must match an organization `name`
 ### Errors
 #### - Missing required fields
 _status_: `422`, _body_: `{"errors":{"first_name":["can't be blank"],"last_name":["can't be blank"]}}`
+
+#### - Duplicate external id
+_status_: `422`, _body_: `{"errors":{"external_id":["has already been taken"]}}`
 
 #### - Not found
 __PLEASE NOTE__: This update endpoint works as an "upsert". If you use an email address that doesn't belong to a pre-existing user, a new user will be created.
