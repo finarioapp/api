@@ -70,7 +70,7 @@ Name | Required | Type | Notes
 `date` | true | time | e.g., "2016-11-30"
 `po_number` | true | string | Purchase order number
 `po_line` | true | string | Purchase order line
-`reference` | | string | A unique external reference ID
+`reference` | true | string | A unique external reference ID
 `description` | | string |
 `po_type` | | string | Purchase order type
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID

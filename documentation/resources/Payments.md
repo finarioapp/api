@@ -77,7 +77,7 @@ Name | Required | Type | Notes
 ---- | :------: | :--: | -----
 `amount` | true | float |
 `date` | true | time | e.g., "2016-11-30"
-`reference` | | string | A unique external reference ID
+`reference` | true | string | A unique external reference ID
 `description` | | string |
 `invoice_number` | | string |
 `check_number` | | string |

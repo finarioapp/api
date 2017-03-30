@@ -67,7 +67,7 @@ Name | Required | Type | Notes
 `amount` | true | float |
 `date` | true | time | e.g., "2016-11-30"
 `number` | true | string |
-`reference` | | string | A unique external reference ID
+`reference` | true | string | A unique external reference ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 `description` | | string |
 `po_number` | | string | Purchase order number
