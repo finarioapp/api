@@ -19,8 +19,6 @@ You can also send test requests to the end point you set up from within the Fina
 * * *
 
 ## Sample Payload
-The investment json will look something like this (custom field values excluded from this example):
-
 
 ```
 {
