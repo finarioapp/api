@@ -67,6 +67,12 @@ never acquire a secure token with which to impersonate a valid customer.
 
 The use of an IP whitelist to verify that the connection is being established from a known safe IP address provides another layer of security.  This multi-layered, "defense in depth" strategy ensures that API connections to Finario are always highly secure.
 
+***
+
+
+## Web Hooks (outgoing from Finario)
+- **[Post-Approval](https://github.com/finarioapp/api/blob/master/documentation/web_hooks/PostApproval.md)**
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
