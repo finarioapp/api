@@ -48,7 +48,7 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 - **[Organizations](https://github.com/finarioapp/api/blob/master/documentation/resources/Organizations.md)** (index, create)
 - **[Payments](https://github.com/finarioapp/api/blob/master/documentation/resources/Payments.md)** (show, create, upsert)
 - **[Purchase Orders](https://github.com/finarioapp/api/blob/master/documentation/resources/PurchaseOrders.md)** (show, create, upsert)
-- **[Users](https://github.com/finarioapp/api/blob/master/documentation/resources/Users.md)** (show, upsert)
+- **[Users](https://github.com/finarioapp/api/blob/master/documentation/resources/Users.md)** (index, show, upsert)
 - **[Vendors](https://github.com/finarioapp/api/blob/master/documentation/resources/Vendors.md)** (index, create, upsert)
 
 

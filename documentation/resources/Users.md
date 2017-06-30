@@ -1,9 +1,50 @@
 # Users Resources
 
-1. [Show](#users-show)
-2. [Upsert](#users-upsert)
+1. [Index](#users-index)
+2. [Show](#users-show)
+3. [Upsert](#users-upsert)
+
 
 * * *
+
+
+## Users Index
+
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/users
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/users?token=<your_api_token>
+```
+
+<h2/>
+
+### Successful Response
+#### Status
+`200`
+
+#### Body
+```
+[
+  { "id": "<user 1 id>", "name": "<user 1 name>", "email": "<user 1 email>", "external_id": "<user 1 external_id>" },
+  ...
+  { "id": "<user n id>", "name": "<user n name>", "email": "<user n email>", "external_id": "<user n external_id>" }
+]
+```
+
+<h2/>
+
+#### Please note:
+The Users index endpoint does not have pagination. The endpoint will return all users, regardless of how many are in your Finario application.
+
+
+* * *
+
 
 ## Users Show
 
