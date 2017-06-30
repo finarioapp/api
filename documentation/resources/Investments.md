@@ -38,8 +38,8 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 [
   {
     name: '<name>',
-    id: '<investment_id>',
-    investment_id: '<investment_code>',
+    id: '<id>',
+    investment_id: '<investment code>',
     api_request: '<api request used to create the investment (if created via api)>',
     costs_path: '<resource locator for costs>'
   },
@@ -77,7 +77,7 @@ Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" s
 ## Investments Show
 
 ### Endpoint
-`GET https://<your_host>.finario.com/api/investments/investment_id?token='your-api-token'`
+`GET https://<your_host>.finario.com/api/investments/<investment id>?token='your-api-token'`
 
 <h2/>
 
@@ -90,8 +90,8 @@ Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" s
 [
   {
     name: '<name>',
-    id: '<investment_id>',
-    investment_id: '<investment_code>',
+    id: '<id>',
+    investment_id: '<investment code>',
     api_request: '<api request used to create the investment (if created via api)>',
     costs_path: '<resource locator for costs>'
   },
@@ -123,6 +123,7 @@ Name | Required | Type | Notes
 `organization_code` | true^ | string | ^Either organization_code or organization_name is required. Must match a value that already exists in your Finario application.
 `organization_name` | true^ | string | ^Either organization_code or organization_name is required. Must match a value that already exists in your Finario application.
 `name` | true | string |
+`investment_id` | | string | A unique ID from your external system. This is saved as the "Investment Code" in Finario, and can be used as a resource identifier for other API endpoints.
 `investment_category_name` | true | string | Must match a value that already exists in your Finario application.
 `owner_name` | true^ | string | ^Either owner_name or owner_email is required. Must match a value that already exists in your Finario application.
 `owner_email` | true^ | string | ^Either owner_name or owner_email is required. Must match a value that already exists in your Finario application.
@@ -142,8 +143,8 @@ Name | Required | Type | Notes
 ```
 {
   name: '<name>',
-  id: '<investment_id>',
-  investment_id: '<investment_code>',
+  id: '<investment id>',
+  investment_id: '<investment code>',
   api_request: '<api request used to create the investment (if created via api)>',
   costs_path: '<resource locator for costs>'
 }
@@ -171,7 +172,7 @@ _status_: `422`, _body_: `{"errors":["In service date cannot be before project s
 ### Endpoint
 
 ```
-PUT https://<your_host>.finario.com/api/investments/<investment_id>?token='your-api-token'
+PUT https://<your_host>.finario.com/api/investments/<investment id>?token='your-api-token'
 ```
 
 <h2/>
@@ -191,8 +192,8 @@ Please see the [list in the Investments Create section above](#acceptable-parame
 [
   {
     name: '<name>',
-    id: '<investment_id>',
-    investment_id: '<investment_code>',
+    id: '<id>',
+    investment_id: '<investment code>',
     api_request: '<api request used to create the investment (if created via api)>',
     costs_path: '<resource locator for costs>'
   },
