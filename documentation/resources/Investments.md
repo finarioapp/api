@@ -41,7 +41,8 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
     id: '<id>',
     investment_id: '<investment code>',
     api_request: '<api request used to create the investment (if created via api)>',
-    costs_path: '<resource locator for costs>'
+    costs_path: '<resource locator for costs>',
+    organization_code: '<org code>'
   },
   ...
 ]
@@ -93,7 +94,8 @@ Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" s
     id: '<id>',
     investment_id: '<investment code>',
     api_request: '<api request used to create the investment (if created via api)>',
-    costs_path: '<resource locator for costs>'
+    costs_path: '<resource locator for costs>',
+    organization_code: '<org code>'
   },
   ...
 ]
@@ -146,7 +148,8 @@ Name | Required | Type | Notes
   id: '<investment id>',
   investment_id: '<investment code>',
   api_request: '<api request used to create the investment (if created via api)>',
-  costs_path: '<resource locator for costs>'
+  costs_path: '<resource locator for costs>',
+  organization_code: '<org code>'
 }
 ```
 
@@ -189,16 +192,14 @@ Please see the [list in the Investments Create section above](#acceptable-parame
 
 #### Body
 ```
-[
-  {
-    name: '<name>',
-    id: '<id>',
-    investment_id: '<investment code>',
-    api_request: '<api request used to create the investment (if created via api)>',
-    costs_path: '<resource locator for costs>'
-  },
-  ...
-]
+{
+  name: '<name>',
+  id: '<id>',
+  investment_id: '<investment code>',
+  api_request: '<api request used to create the investment (if created via api)>',
+  costs_path: '<resource locator for costs>',
+  organization_code: '<org code>'
+}
 ```
 
 ### Errors
@@ -207,4 +208,3 @@ _status_: `422`, _body_: `{"errors":["Organization can't be blank"]}`
 
 #### - Invalid date sequence
 _status_: `422`, _body_: `{"errors":["In service date cannot be before project start date"]}}`
-
