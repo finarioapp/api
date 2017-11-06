@@ -31,9 +31,32 @@ GET https://<your_host>.finario.com/api/users?token=<your_api_token>
 #### Body
 ```
 [
-  { "id": "<user 1 id>", "name": "<user 1 name>", "email": "<user 1 email>", "external_id": "<user 1 external_id>" },
+  {
+    "id": "abc123",
+    "name": "John Doe",
+    "email": "john.doe@finario.com",
+    "external_id": "x19221zz5",
+    "authority_assignments": [
+      {
+        "authority": "Project Manager",
+        "organization": "Northeast"
+      }
+    ],
+    "permissions": [
+      {
+        "name": "View\/Edit",
+        "organization": "Northeast"
+      }
+    ],
+    "has_actual_costs_feature": true,
+    "has_approvals": true,
+    "has_budgets_feature": true,
+    "has_portfolios_feature": true,
+    "has_reports": true,
+    "active_for_authentication": true,
+    "last_modified": "2017-11-06T11:37:39-05:00"
+  },
   ...
-  { "id": "<user n id>", "name": "<user n name>", "email": "<user n email>", "external_id": "<user n external_id>" }
 ]
 ```
 
@@ -69,10 +92,29 @@ GET https://<your_host>.finario.com/api/users/<user_email>?token=<your_api_token
 #### Body
 ```
 {
-  "id": "<user id>",
-  "name": "<user name>",
-  "email": "<user email>",
-  "external_id": "<user external_id>"
+  "id": "abc123",
+  "name": "John Doe",
+  "email": "john.doe@finario.com",
+  "external_id": "x19221zz5",
+  "authority_assignments": [
+    {
+      "authority": "Project Manager",
+      "organization": "Northeast"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "View\/Edit",
+      "organization": "Northeast"
+    }
+  ],
+  "has_actual_costs_feature": true,
+  "has_approvals": true,
+  "has_budgets_feature": true,
+  "has_portfolios_feature": true,
+  "has_reports": true,
+  "active_for_authentication": true,
+  "last_modified": "2017-11-06T11:37:39-05:00"
 }
 ```
 
