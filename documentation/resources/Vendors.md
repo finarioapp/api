@@ -33,7 +33,12 @@ GET https://<your_host>.finario.com/api/vendors
   {
     name: '<name>',
     id: '<id>',
-    vendor_id: '<external vendor id>'
+    vendor_id: '<external vendor id>',
+    external_ids: [
+      '<external vendor id>',
+      '<external id 2>',
+      '<external id n>'
+    ]
   },
   ...
 ]
@@ -53,6 +58,7 @@ Name | Required | Type | Notes
 ---- | :------: | :--: | -----
 `name` | true | string |
 `vendor_id` | | string | If available, this should be a unique ID from your external system. If not provided, a parameterized version of the vendor `name` will be created
+`external_ids` | | array | If the same vendor has different IDs in different external systems, you can add more than one. Any of the values in this array would work as a Vendor ID for POST & PUT requests.
 `phone_number` | | string |
 `web_address` | | string |
 `address` | | string |
@@ -75,7 +81,12 @@ Name | Required | Type | Notes
 {
   "id": "<id>",
   "name": "<vendor_name>",
-  "vendor_id": "<vendor_id>"
+  "vendor_id": "<vendor_id>",
+  "external_ids": [
+    "<vendor_id_1>",
+    "<vendor_id_2>",
+    "<vendor_id_n>"
+  ]
 }
 ```
 <h2/>
