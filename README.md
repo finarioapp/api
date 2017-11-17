@@ -44,10 +44,10 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 - **[Costs](https://github.com/finarioapp/api/blob/master/documentation/resources/Costs.md)** (index, show, create)
 - **[Cost Categories](https://github.com/finarioapp/api/blob/master/documentation/resources/CostCategories.md)** (index, create, update)
 - **[Investments](https://github.com/finarioapp/api/blob/master/documentation/resources/Investments.md)** (index, show, create, update)
-- **[Invoices](https://github.com/finarioapp/api/blob/master/documentation/resources/Invoices.md)** (show, create, upsert)
+- **[Invoices](https://github.com/finarioapp/api/blob/master/documentation/resources/Invoices.md)** (index, show, create, upsert)
 - **[Organizations](https://github.com/finarioapp/api/blob/master/documentation/resources/Organizations.md)** (index, create)
-- **[Payments](https://github.com/finarioapp/api/blob/master/documentation/resources/Payments.md)** (show, create, upsert)
-- **[Purchase Orders](https://github.com/finarioapp/api/blob/master/documentation/resources/PurchaseOrders.md)** (show, create, upsert)
+- **[Payments](https://github.com/finarioapp/api/blob/master/documentation/resources/Payments.md)** (index, show, create, upsert)
+- **[Purchase Orders](https://github.com/finarioapp/api/blob/master/documentation/resources/PurchaseOrders.md)** (index, show, create, upsert)
 - **[Users](https://github.com/finarioapp/api/blob/master/documentation/resources/Users.md)** (index, show, upsert)
 - **[Vendors](https://github.com/finarioapp/api/blob/master/documentation/resources/Vendors.md)** (index, create, upsert)
 

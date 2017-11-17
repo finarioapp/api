@@ -1,8 +1,67 @@
 # Invoices Resources
 
-1. [Show](#invoices-show)
-2. [Create](#invoices-create)
-3. [Upsert](#invoices-upsert)
+1. [Index](#invoices-index)
+2. [Show](#invoices-show)
+3. [Create](#invoices-create)
+4. [Upsert](#invoices-upsert)
+
+
+* * *
+
+## Invoices Index
+
+* Please note that the index endpoint doesn't currently support pagination.
+
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/invoices
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/invoices?token=<your_api_token>
+```
+<h2/>
+
+
+### Successful Response
+#### Status
+`200`
+
+#### Body
+```
+[
+  {
+    "amount": {
+      "cents": 2000000,
+      "currency": "USD"
+    },
+    "assignment": {
+      "organization_id": "<org_id>",
+      "user_id": "<user_id>",
+      "investment_id": "<investment_id>",
+      "cost_id": "<cost_id>",
+      "manually_unassigned": false
+    },
+    "date": "2016-11-30",
+    "description": "An invoice we like a lot",
+    "gl_line": "2",
+    "id": "<invoice_id>",
+    "number": "42",
+    "po_line": "2",
+    "po_number": "33",
+    "reference": "<unique_reference_id>",
+    "vendor_id": "<vendor_id>"
+  },
+  { <invoice 2> },
+  ...
+  { <invoice n> }
+]
+
+```
+
 
 * * *
 

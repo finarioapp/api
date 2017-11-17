@@ -1,12 +1,72 @@
 # Payments Resources
 
-1. [Show](#payments-show)
-2. [Create](#payments-create)
-3. [Upsert](#payments-upsert)
+1. [Index](#payments-index)
+2. [Show](#payments-show)
+3. [Create](#payments-create)
+4. [Upsert](#payments-upsert)
+
+* * *
+
+## Payments Index
+
+* Please note that the index endpoint doesn't currently support pagination.
+
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/payments
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
+```
+<h2/>
+
+
+### Successful Response
+#### Status
+`200`
+
+#### Body
+```
+[
+  {
+    "amount": {
+      "cents": 1000000,
+      "currency": "USD"
+    },
+    "assignment": {
+      "organization_id": "<org_id>",
+      "user_id": "<user_id>",
+      "investment_id": "<investment_id>",
+      "cost_id": "<cost_id>",
+      "manually_unassigned": false
+    },
+    "check_number": "22",
+    "date": "2017-10-03",
+    "description": "Testing vendor match",
+    "id": "<payment_id>",
+    "invoice_number": "22"
+    "po_line": "2",
+    "po_number": "vt1-po",
+    "po_type": "Regular",
+    "reference": "<unique_reference_id>",
+    "vendor_id": "<vendor_id>"
+  },
+  { <payment 2> },
+  ...
+  { <payment n> }
+]
+
+```
+
 
 * * *
 
 ## Payments Show
+
 
 ### Endpoint
 ```
@@ -40,7 +100,7 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_to
     "cost_id": "<cost_id>",
     "manually_unassigned": false
   },
-  "date": "2016-11-22T00:00:00-05:00",
+  "date": "2016-11-22",
   "id": "<payment_id>",
   "vendor_id": "<vendor_id>"
 }
@@ -107,7 +167,7 @@ Name | Required | Type | Notes
     "cost_id": "<cost_id>",
     "manually_unassigned": false
   },
-  "date": "2016-11-30T00:00:00-05:00",
+  "date": "2016-11-30",
   "id": "<payment_id>",
   "number": "<invoice_number>",
   "reference": "<invoice_reference_id>",

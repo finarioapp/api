@@ -1,8 +1,67 @@
 # Purchase Orders Resources
 
-1. [Show](#purchase-orders-show)
-2. [Create](#purchase-orders-create)
-3. [Upsert](#purchase-orders-upsert)
+1. [Index](#purchase-orders-index)
+2. [Show](#purchase-orders-show)
+3. [Create](#purchase-orders-create)
+4. [Upsert](#purchase-orders-upsert)
+
+
+* * *
+
+## Purchase Orders Index
+
+* Please note that the index endpoint doesn't currently support pagination.
+
+### Endpoint
+```
+GET https://<your_host>.finario.com/api/purchase_orders
+  Request Header: {
+    x-api-token='your-api-token',
+    Content-Type='application/json'
+  }
+```
+```
+GET https://<your_host>.finario.com/api/purchase_orders?token=<your_api_token>
+```
+<h2/>
+
+
+### Successful Response
+#### Status
+`200`
+
+#### Body
+```
+[
+{
+    "amount": {
+      "cents": 10000,
+      "currency": "USD"
+    },
+    "assignment": {
+      "organization_id": "<org_id>",
+      "user_id": "<user_id>",
+      "investment_id": "<investment_id>",
+      "cost_id": "<cost_id>",
+      "manually_unassigned": false
+    },
+    "date": "2017-10-03",
+    "description": "A purchase order we like a lot",
+    "id": "<po_id>",
+    "po_line": "1000",
+    "po_number": "3",
+    "po_type": "Regular",
+    "reference": "<unique_ref_id>",
+    "vendor_id": "<vendor_id>"
+  },
+  { <purchase_order 2> },
+  ...
+  { <purchase_order n> }
+]
+
+```
+
+
 
 * * *
 
