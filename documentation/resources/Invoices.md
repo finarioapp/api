@@ -10,7 +10,7 @@
 
 ## Invoices Index
 
-* Please note that the index endpoint doesn't currently support pagination.
+Please note that the index endpoint doesn't currently support pagination.
 
 ### Endpoint
 ```
@@ -61,6 +61,21 @@ GET https://<your_host>.finario.com/api/invoices?token=<your_api_token>
 ]
 
 ```
+
+<h2/>
+
+### Optional Parameters
+
+The following query parameters can be included in the request. These params apply to the Investment the Invoices are assigned to. If an Invoice is not assigned to an Investment, it will not be returned while using these params.
+
+All values should be encoded for URL. If typing into a browswer all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
+
+
+Name | Example | Description
+---- | ------- | -----------
+`closed` | `closed=true` | Returns Invoices assigned to Investments that are closed. Use `closed=false` to return Invoices assigned to open Investments.
+`closed_within_days_ago` | `closed_within_days_ago=30` | Takes an integer value, `x`. Returns Invoices assigned to Investments that were closed in the last `x` days.
+
 
 
 * * *

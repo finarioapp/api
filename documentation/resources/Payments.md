@@ -5,11 +5,12 @@
 3. [Create](#payments-create)
 4. [Upsert](#payments-upsert)
 
+
 * * *
 
 ## Payments Index
 
-* Please note that the index endpoint doesn't currently support pagination.
+Please note that the index endpoint doesn't currently support pagination.
 
 ### Endpoint
 ```
@@ -46,7 +47,7 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
     },
     "check_number": "22",
     "date": "2017-10-03",
-    "description": "Testing vendor match",
+    "description": "A payment we like a lot",
     "id": "<payment_id>",
     "invoice_number": "22"
     "po_line": "2",
@@ -61,6 +62,21 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
 ]
 
 ```
+
+<h2/>
+
+### Optional Parameters
+
+The following query parameters can be included in the request. These params apply to the Investment the Payments are assigned to. If a Payment is not assigned to an Investment, it will not be returned while using these params.
+
+All values should be encoded for URL. If typing into a browswer all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
+
+
+Name | Example | Description
+---- | ------- | -----------
+`closed` | `closed=true` | Returns Payments assigned to Investments that are closed. Use `closed=false` to return Payments assigned to open Investments.
+`closed_within_days_ago` | `closed_within_days_ago=30` | Takes an integer value, `x`. Returns Payments assigned to Investments that were closed in the last `x` days.
+
 
 
 * * *
