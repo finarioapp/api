@@ -54,7 +54,8 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
     "po_number": "vt1-po",
     "po_type": "Regular",
     "reference": "<unique_reference_id>",
-    "vendor_id": "<vendor_id>"
+    "vendor_id": "<vendor_id>",
+    "cost_category_name": "<cost_category_name>"
   },
   { <payment 2> },
   ...
@@ -118,7 +119,8 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_to
   },
   "date": "2016-11-22",
   "id": "<payment_id>",
-  "vendor_id": "<vendor_id>"
+  "vendor_id": "<vendor_id>",
+  "cost_category_name": "<cost_category_name>"
 }
 ```
 
@@ -162,6 +164,7 @@ Name | Required | Type | Notes
 `po_line` | | string | Purchase order line
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
+`cost_category_name` | | string | e.g., "9.0%20Information %20Technology"
 
 <h2/>
 
