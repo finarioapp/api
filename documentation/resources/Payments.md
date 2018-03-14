@@ -190,7 +190,8 @@ Name | Required | Type | Notes
   "id": "<payment_id>",
   "number": "<invoice_number>",
   "reference": "<invoice_reference_id>",
-  "vendor_id": "<vendor_id>"
+  "vendor_id": "<vendor_id>",
+  "cost_category_name": "<cost_category_name>"
 }
 ```
 
