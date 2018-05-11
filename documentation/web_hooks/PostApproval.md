@@ -23,6 +23,8 @@ You can also send test requests to the end point you set up from within the Fina
 ```
 {
   "name": "Foo Investment",
+  "investment_id": "933363",
+  "organization_code": "ABC123",
   "Custom Field 1 Name": "The Name 1",
   "Custom Field 2 Name": "The Name 2",
   "project_start": [
