@@ -165,6 +165,7 @@ Name | Required | Type | Notes
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 `cost_category_name` | | string | e.g., "9.0%20Information %20Technology"
+`unique_cost_id` | | string | e.g., "abc123" This ID is used to match payments to this cost.
 
 <h2/>
 
@@ -191,7 +192,8 @@ Name | Required | Type | Notes
   "number": "<invoice_number>",
   "reference": "<invoice_reference_id>",
   "vendor_id": "<vendor_id>",
-  "cost_category_name": "<cost_category_name>"
+  "cost_category_name": "<cost_category_name>",
+  "unique_cost_id": "<unique_cost_id>"
 }
 ```
 
