@@ -55,7 +55,8 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
     "po_type": "Regular",
     "reference": "<unique_reference_id>",
     "vendor_id": "<vendor_id>",
-    "cost_category_name": "<cost_category_name>"
+    "cost_category_name": "<cost_category_name>",
+    "unique_cost_id": "<unique_cost_id>"
   },
   { <payment 2> },
   ...
@@ -120,7 +121,8 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_to
   "date": "2016-11-22",
   "id": "<payment_id>",
   "vendor_id": "<vendor_id>",
-  "cost_category_name": "<cost_category_name>"
+  "cost_category_name": "<cost_category_name>",
+  "unique_cost_id": "<unique_cost_id>"
 }
 ```
 
