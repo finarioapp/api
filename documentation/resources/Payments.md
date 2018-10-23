@@ -167,7 +167,7 @@ Name | Required | Type | Notes
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 `cost_category_name` | | string | e.g., "9.0%20Information %20Technology"
-`unique_cost_id` | | string | e.g., "abc123" This ID is used to match payments to this cost.
+`unique_cost_id` | | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
 
 <h2/>
 
@@ -208,6 +208,8 @@ _status_: `422`, _body_: `{"errors":{"date":["can't be blank"],"amount":["can't 
 #### - Duplicate Reference ID
 _status_: `422`, _body_: `{"errors":{"reference":["has already been taken"]}}`
 
+#### - Unmatched Unique Cost ID
+_status_: `404`, _body_: `{"errors":{"Cost with ID <unique_cost_id> not found"}}`
 * * *
 
 
