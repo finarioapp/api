@@ -69,7 +69,7 @@ Name | Example | Description
 `round` | `round=Approved` | Investments that are fully approved. Other values: '"Idea",' "Closed", "Denied", "Invalidated", "Pending", "Remanded", or the name of an approval round will return all investments currently in that round.
 `budgeted_status` | `budgeted_status=budgeted` | Investments that have been added to a budget. The only other possible value is `unbudgeted`.
 `vendor` | `vendor=Amazon` | Investments with the vendor "Amazon" associated with any of the investment's costs. The value should match the Vendor's display name (including capitalization and spaces).
-Custom Fields | `c.Funding=Cash` | Investments with the custom field "Funding" set to "Cash". Parameter keys and values should match those defined within `<your_host>.finario.com`.
+Custom Fields | `c_Funding=Cash` | Investments with the custom field "Funding" set to "Cash". Parameter keys and values should match those defined within `<your_host>.finario.com`.
 
 
 * * *
