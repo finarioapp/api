@@ -3,6 +3,8 @@ Our set of RESTful APIs enable seamless integration of Finario directly into you
 
 The API uses JSON over HTTPS to allow you to build applications capable of using or adding Finario data in your application.
 
+API access is only available with the Enterprise Edition.
+
 ***
 
 ## Checklist
