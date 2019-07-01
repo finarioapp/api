@@ -150,7 +150,6 @@ POST https://<your_host>.finario.com/api/investments/<investment_id>/costs/<cost
 ```
 
 <h2/>
-
 ### Acceptable Parameters
 
 Name | Required | Type | Notes
@@ -158,16 +157,16 @@ Name | Required | Type | Notes
 `amount` | true | float |
 `date` | true | time | e.g., "2016-11-30"
 `reference` | true | string | A unique external reference ID
-`description` | | string |
-`invoice_number` | | string |
-`check_number` | | string |
-`po_type` | | string | Purchase order type
-`po_number` | | string | Purchase order number
-`po_line` | | string | Purchase order line
-`vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
-`currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
-`cost_category_name` | | string | e.g., "9.0%20Information %20Technology"
-`unique_cost_id` | | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
+`description` | false | string |
+`invoice_number` | false | string |
+`check_number` | false | string |
+`po_type` | false | string | Purchase order type
+`po_number` | false | string | Purchase order number
+`po_line` | false | string | Purchase order line
+`vendor_id` | false | string | Can use the internal Finario ID or your unique external vendor ID
+`currency_iso_code` | false | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
+`cost_category_name` | false | string | e.g., "9.0%20Information %20Technology"
+`unique_cost_id` | false | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
  
 <h2/>
 

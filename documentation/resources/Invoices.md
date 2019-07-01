@@ -119,6 +119,7 @@ GET https://<your_host>.finario.com/api/invoices/<invoice_id>?token=<your_api_to
   },
   "date": "2016-11-30T00:00:00-05:00",
   "id": "<invoice_id>",
+  "po_type": "<po_type>",
   "vendor_id": "<vendor_id>",
   "unique_cost_id": "<unique_cost_id>",
   "cost_category_id": "<cost_category_id>"
