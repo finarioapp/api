@@ -147,6 +147,7 @@ Name | Required | Type | Notes
 `po_type` | | string | Purchase order type
 `vendor_id` | | string | Can use the internal Finario ID or your unique external vendor ID
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
+`unique_cost_id` | false | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
 
 <h2/>
 

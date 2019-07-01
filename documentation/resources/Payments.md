@@ -168,7 +168,7 @@ Name | Required | Type | Notes
 `currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 `cost_category_name` | | string | e.g., "9.0%20Information %20Technology"
 `unique_cost_id` | | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
-
+ 
 <h2/>
 
 ### Successful Response
