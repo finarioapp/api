@@ -75,7 +75,7 @@ Custom Fields | `c_Funding=Cash` | See [custom fields](#custom-fields) for more 
 * * *
 
 ### Custom Fields
-Custom fields will only be option parameters if they are turned on within your account.
+Custom fields will only be optional parameters if they are turned on within your account.
 If you're unsure, ask your account manager whether or not you have access to custom fields.
 
 Custom fields are formatted with a `c_` proceeding whatever you've named the custom field.
