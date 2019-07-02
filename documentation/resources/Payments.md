@@ -71,7 +71,7 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
 
 The following query parameters can be included in the request. These params apply to the Investment the Payments are assigned to. If a Payment is not assigned to an Investment, it will not be returned while using these params.
 
-All values should be encoded for URL. If typing into a browswer all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
+All values should be encoded for URL. If typing into a browser all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
 
 
 Name | Example | Description
