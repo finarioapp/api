@@ -52,8 +52,11 @@ GET https://<your_host>.finario.com/api/invoices?token=<your_api_token>
     "number": "42",
     "po_line": "2",
     "po_number": "33",
+    "po_type": "<po_type>"
     "reference": "<unique_reference_id>",
-    "vendor_id": "<vendor_id>"
+    "vendor_id": "<vendor_id>",
+    "unique_cost_id": "<unique_cost_id>",
+    "cost_category_id": "<cost_category_id>"
   },
   { <invoice 2> },
   ...
@@ -68,7 +71,7 @@ GET https://<your_host>.finario.com/api/invoices?token=<your_api_token>
 
 The following query parameters can be included in the request. These params apply to the Investment the Invoices are assigned to. If an Invoice is not assigned to an Investment, it will not be returned while using these params.
 
-All values should be encoded for URL. If typing into a browswer all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
+All values should be encoded for URL. If typing into a browser all query parameters are separated by '&', for example after "token=your_token&closed=true&closed_within_days_ago=10"
 
 
 Name | Example | Description
@@ -116,7 +119,10 @@ GET https://<your_host>.finario.com/api/invoices/<invoice_id>?token=<your_api_to
   },
   "date": "2016-11-30T00:00:00-05:00",
   "id": "<invoice_id>",
-  "vendor_id": "<vendor_id>"
+  "po_type": "<po_type>",
+  "vendor_id": "<vendor_id>",
+  "unique_cost_id": "<unique_cost_id>",
+  "cost_category_id": "<cost_category_id>"
 }
 ```
 
@@ -141,13 +147,15 @@ Name | Required | Type | Notes
 `amount` | true | float |
 `date` | true | time | e.g., "2016-11-30"
 `number` | true | string |
-`reference` | true | string | A unique external reference ID
-`currency_iso_code` | | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
-`description` | | string |
-`po_number` | | string | Purchase order number
-`po_line` | | string | Purchase order line
-`po_type` | | string | Purchase order type
-`gl_line` | | string | General ledger line
+`reference` | false | string | A unique external reference ID
+`currency_iso_code` | false | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
+`description` | false | string |
+`po_number` | false | string | Purchase order number
+`po_line` | false | string | Purchase order line
+`po_type` | false | string | Purchase order type
+`gl_line` | false | string | General ledger line
+`vendor_id` | false | string | Vendor ID  
+`unique_cost_id` | false | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
 
 <h2/>
 

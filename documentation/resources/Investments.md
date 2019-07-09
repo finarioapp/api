@@ -53,7 +53,7 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
 
 The following query parameters can be included in the request to filter for investments that only meet these characteristics. Only investments that the user providing the token can see are included. All values should be encoded for URL.
 
-If typing into a browswer all query parameters are separated by '&' for example after "token=whatever&start_month=7&start_year=2013..."
+If typing into a browser all query parameters are separated by '&' for example after "token=whatever&start_month=7&start_year=2013..."
 
 
 Name | Example | Description
@@ -69,11 +69,20 @@ Name | Example | Description
 `round` | `round=Approved` | Investments that are fully approved. Other values: '"Idea",' "Closed", "Denied", "Invalidated", "Pending", "Remanded", or the name of an approval round will return all investments currently in that round.
 `budgeted_status` | `budgeted_status=budgeted` | Investments that have been added to a budget. The only other possible value is `unbudgeted`.
 `vendor` | `vendor=Amazon` | Investments with the vendor "Amazon" associated with any of the investment's costs. The value should match the Vendor's display name (including capitalization and spaces).
-Custom Fields | `c_Funding=Cash` | Investments with the custom field "Funding" set to "Cash". Parameter keys and values should match those defined within `<your_host>.finario.com`.
+Custom Fields | `c_Funding=Cash` | See [custom fields](#custom-fields) for more information
 
 
 * * *
 
+### Custom Fields
+Custom fields will only be optional parameters if they are turned on within your account.
+If you're unsure, ask your account manager whether or not you have access to custom fields.
+
+Custom fields are formatted with a `c_` proceeding whatever you've named the custom field.
+
+The example`c_Funding=Cash` will take you to the investments where the custom field "Funding" is set to "Cash'
+
+Parameter keys and values should match what you've defined in your custom fields
 
 ## Investments Show
 
