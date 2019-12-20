@@ -102,6 +102,7 @@ Parameter keys and values should match what you've defined in your custom fields
     name: '<name>',
     id: '<id>',
     investment_id: '<investment code>',
+    investment_category_name": '<investment category name>',
     api_request: '<api request used to create the investment (if created via api)>',
     costs_path: '<resource locator for costs>',
     organization_code: '<org code>'
@@ -156,6 +157,7 @@ Name | Required | Type | Notes
   name: '<name>',
   id: '<investment id>',
   investment_id: '<investment code>',
+  investment_category_name": '<investment category name>',
   api_request: '<api request used to create the investment (if created via api)>',
   costs_path: '<resource locator for costs>',
   organization_code: '<org code>'
@@ -205,6 +207,7 @@ Please see the [list in the Investments Create section above](#acceptable-parame
   name: '<name>',
   id: '<id>',
   investment_id: '<investment code>',
+  investment_category_name": '<investment category name>',
   api_request: '<api request used to create the investment (if created via api)>',
   costs_path: '<resource locator for costs>',
   organization_code: '<org code>'
