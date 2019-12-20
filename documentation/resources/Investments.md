@@ -40,6 +40,7 @@ GET https://<your_host>.finario.com/api/investments?token='your-api-token'
     name: '<name>',
     id: '<id>',
     investment_id: '<investment code>',
+    investment_category_name": '<investment category name>',
     api_request: '<api request used to create the investment (if created via api)>',
     costs_path: '<resource locator for costs>',
     organization_code: '<org code>'
