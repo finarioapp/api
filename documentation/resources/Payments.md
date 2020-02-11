@@ -149,8 +149,10 @@ or
 POST https://<your_host>.finario.com/api/investments/<investment_id>/costs/<cost_id>/payments/
 ```
 ### Matching payments to costs using the unique_cost_id
+```
 POST https://<your_host>.finario.com/api/investments/<investment_id>/payments?unique_cost_id=<unique_cost_id>
-`unique_cost_id` and `cost_id` are not interchangab
+```
+`unique_cost_id` and `cost_id` are not interchangable
 
 
 <h2/>
