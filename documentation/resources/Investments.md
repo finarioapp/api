@@ -64,7 +64,7 @@ Name | Example | Description
 `end_month` | `end_month=6` | Investments with spend in or before June. Should be used with `end_year`.
 `end_year` | `end_year=2014` | Investments with spend in or before 2014. Should be used with `end_month`.
 `keywords` | `keywords=one,two` | Investments that have both of the keywords 'one' AND 'two' (not OR). Multiple keywords should be separated by commas.
-`organization` | `organization=Asia` | Investments in the "Asia" organization. The param must match the organization's display name or organization code(including capitalization and spaces).
+`organization` | `organization=Asia` or `organization=Asia%20123` | Investments in the "Asia" organization. The param must match the organization's display name or organization code(including capitalization and spaces).
 `categories` | `categories[]=Foo` | Investments in the "Foo" category. The param must match the category's display name (including capitalization and spaces). Multiple investment categories can be used like so: `&categories[]=Baz&categories[]=Foo`.
 `size_range` | `size_range=greater_than,$1M` | Investments with more than 1 million dollars in spends. (Yes, that is a comma). Only 'greater than' ranges defined in Approval Routes are valid. Ranges with lower and upper bounds can be defined like so: `greater_than,$500k-less_than,$1M`
 `round` | `round=Approved` | Investments that are fully approved. Other values: '"Idea",' "Closed", "Denied", "Invalidated", "Pending", "Remanded", or the name of an approval round will return all investments currently in that round.
