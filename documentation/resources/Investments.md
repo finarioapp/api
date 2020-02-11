@@ -70,6 +70,8 @@ Name | Example | Description
 `round` | `round=Approved` | Investments that are fully approved. Other values: '"Idea",' "Closed", "Denied", "Invalidated", "Pending", "Remanded", or the name of an approval round will return all investments currently in that round.
 `budgeted_status` | `budgeted_status=budgeted` | Investments that have been added to a budget. The only other possible value is `unbudgeted`.
 `vendor` | `vendor=Amazon` | Investments with the vendor "Amazon" associated with any of the investment's costs. The value should match the Vendor's display name (including capitalization and spaces).
+`approved_before` | `approved_before=2019-12-2` | Investments that were approved before the given date. Use with `approved_after` if selecting investments in a range of dates. Must follow `year-month-date` format.
+`approved_after` | `approved_after=2019-1-24` | Investments that were approved after the given date. Use with `approved_before` if selsecting investments in a range of dates. Must follow `year-month-date` format.
 Custom Fields | `c_Funding=Cash` | See [custom fields](#custom-fields) for more information
 
 
