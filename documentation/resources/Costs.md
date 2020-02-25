@@ -153,7 +153,7 @@ _status_: `404`, _body_: `{"success":false,"message":"Cost Not Found"}`
 
 
 ## Costs Create
-
+#### Important - using this endpoint will erase any existing costs for that investment and then add the new cost being sent
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=<your_api_token>`
 <h2/>
