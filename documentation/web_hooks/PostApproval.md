@@ -49,7 +49,8 @@ Attributes of cost hash:
 Name | Description | Format
 ---- | ------- | -----------
 name | name of cost | string
-account | name or code of account | string
+account_name | account name | string
+account_code | account code | string
 cost_category | cost category name | string
 vendor | vendor code | string
 expected_units | cost data | hash - see below for contents
@@ -67,7 +68,8 @@ Example of cost hash:
 ```
     {
       "name": "First Cost",
-      "account": "Account Name or Code",
+      "account_name": "Account Name",
+      "account_code": "Account Code",
       "cost_category": "Cost Category Name",
       "expected_units": [
         {
@@ -118,7 +120,8 @@ Example of cost hash:
   "costs": [
     {
       "name": "First Cost",
-      "account": "Account Name or Code",
+      "account_name": "Account Name",
+      "account_code": "Account Code",
       "cost_category": "Cost Category Name",
       "expected_units": [
         {
