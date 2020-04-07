@@ -56,7 +56,8 @@ GET https://<your_host>.finario.com/api/payments?token=<your_api_token>
     "reference": "<unique_reference_id>",
     "vendor_id": "<vendor_id>",
     "cost_category_name": "<cost_category_name>",
-    "unique_cost_id": "<unique_cost_id>"
+    "unique_cost_id": "<unique_cost_id>",
+    "account_id": "<account_id>"
   },
   { <payment 2> },
   ...
@@ -122,7 +123,8 @@ GET https://<your_host>.finario.com/api/payments/<payment_id>?token=<your_api_to
   "id": "<payment_id>",
   "vendor_id": "<vendor_id>",
   "cost_category_name": "<cost_category_name>",
-  "unique_cost_id": "<unique_cost_id>"
+  "unique_cost_id": "<unique_cost_id>",
+  "account_id": "<account_id>"
 }
 ```
 
@@ -174,6 +176,7 @@ Name | Required | Type | Notes
 `currency_iso_code` | false | string | e.g., "USD" or "EUR". If no currency is given, your account's base currency will be used.
 `cost_category_name` | false | string | e.g., "9.0%20Information %20Technology"
 `unique_cost_id` | false | string | e.g., "abc123" This ID is used to match payments to a cost and must exist on the cost prior to using it for matching.
+`account_id` | false | string | e.g., "abc123" This ID is used to match payments to a cost
  
 <h2/>
 
@@ -201,7 +204,8 @@ Name | Required | Type | Notes
   "reference": "<invoice_reference_id>",
   "vendor_id": "<vendor_id>",
   "cost_category_name": "<cost_category_name>",
-  "unique_cost_id": "<unique_cost_id>"
+  "unique_cost_id": "<unique_cost_id>",
+  "account_id": "<account_id>"
 }
 ```
 
