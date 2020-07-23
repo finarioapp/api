@@ -153,7 +153,7 @@ _status_: `404`, _body_: `{"success":false,"message":"Cost Not Found"}`
 
 
 ## Costs Create
-#### Important - using this endpoint will erase any existing costs for that investment and then add the new cost being sent
+
 ### Endpoint
 `POST https://<your_host>.finario.com/api/investments/<investment_id>/costs?token=<your_api_token>`
 <h2/>
@@ -164,10 +164,10 @@ Name | Required | Type | Notes
 ---- | :------: | :--: | -----
 `name` | true | string |
 `account` | true | string | Must be the Name of an account that already exists in your Finario application.
+`expected_units` | true | array | An array of Expected Unit objects, e.g. `[{"quantity": 1, "project_month": "M3"}]`. If more than one expected_unit object is passed in, only the first in the array will be used.
 `vendor_name` | | string | Must be the Name of a vendor that already exists in your Finario application.
 `cost_category` | | string | Must be the Name of a Cost Category that already exists in your Finario application.
 `apply_tax` | | string | Send value `yes` if tax should be applied.
-`expected_units` | | array | An array of Expected Unit objects, e.g. `[{"quantity": 1, "project_month": "M3"}]`. If more than one expected_unit object is passed in, only the first in the array will be used.
 expected_units_object[`quantity`] | | float |
 expected_units_object[`project_month`] | | string | This should be the project month of the investment the cost occurs in. For example, if the investment has a start_date of January 2016, and the cost falls in February 2016, the project_month is "M2"; February 2017 is "M14".
 `unit_price` | | hash |
