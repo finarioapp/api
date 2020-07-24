@@ -53,6 +53,7 @@ account | name or code of account | string
 cost_category | cost category name | string
 vendor | vendor code | string
 expected_units | cost data | hash - see below for contents
+unique_cost_id | unique id assigned to cost | string
 
 Attributes of expected units hash:
 
@@ -69,6 +70,7 @@ Example of cost hash:
       "name": "First Cost",
       "account": "Account Name or Code",
       "cost_category": "Cost Category Name",
+      "vendor": "VENDOR-CODE",
       "expected_units": [
         {
           "date": [
@@ -93,7 +95,7 @@ Example of cost hash:
           }
         }
       ],
-      "vendor": "VENDOR-CODE"
+      "unique_cost_id": "12345"
     }
 ```
 
@@ -120,6 +122,7 @@ Example of cost hash:
       "name": "First Cost",
       "account": "Account Name or Code",
       "cost_category": "Cost Category Name",
+      "vendor": "VENDOR-CODE".
       "expected_units": [
         {
           "date": [
@@ -144,7 +147,7 @@ Example of cost hash:
           }
         }
       ],
-      "vendor": "VENDOR-CODE"
+      "unique_cost_id": "12345"
     }
   ]
 }
