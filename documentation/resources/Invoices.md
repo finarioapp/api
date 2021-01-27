@@ -87,14 +87,14 @@ Name | Example | Description
 
 ### Endpoint
 ```
-GET https://<your_host>.finario.com/api/invoices/<invoice_id>
+GET https://<your_host>.finario.com/api/invoices/<invoice_id>?vendor_id=<vendor_id>
   Request Header: {
     x-api-token='your-api-token',
     Content-Type='application/json'
   }
 ```
 ```
-GET https://<your_host>.finario.com/api/invoices/<invoice_id>?token=<your_api_token>
+GET https://<your_host>.finario.com/api/invoices/<invoice_id>?vendor_id=<vendor_id>&token=<your_api_token>
 ```
 <h2/>
 
